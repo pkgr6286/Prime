@@ -1,0 +1,24 @@
+%trail-bullet-complete {
+  background: image-url('check.svg') darken($lightwarmgray, 12%) center center no-repeat;
+  background-size: .9rem;
+  border-color: transparent;
+  color: $flashcard-background;
+  text-align: center;
+}
+
+%flashcard-colors {
+  background-color: $flashcard-background;
+  border: $flashcard-border;
+  border-radius: $flashcard-radius;
+}
+
+%flashcard {
+  @extend %flashcard-colors;
+  margin-bottom: $flashcard-spacing;
+  padding: 1em 0.5em;
+  position: relative;
+
+  @include dashboard-medium {
+    padding: 1em;
+  }
+}

@@ -1,0 +1,56 @@
+$faded: rgba(#000000, 0.12);
+
+.landing-page {
+  @include marketing-fullsize {
+    margin-top: $header-height + 15px;
+  }
+}
+
+.sticky-header {
+  margin-bottom: 0;
+  z-index: $z-header;
+
+  @include marketing-fullsize {
+    padding: 0;
+
+    nav {
+      a {
+        padding: 1rem 2rem;
+      }
+    }
+
+    &:not(.headhesive) {
+      @include position(absolute, 0 0 null 0);
+
+      nav li {
+        margin: 7px;
+
+        &:hover {
+          background: $faded;
+          border-radius: 3px;
+        }
+
+        a {
+          border-left: none;
+          height: 44px;
+          padding: 0.5em 1rem;
+        }
+      }
+    }
+  }
+
+  &.headhesive {
+    @include position(fixed, 0 0 null 0);
+    @include transform(translateY(-100%));
+    @include transition(transform 0.2s);
+    z-index: $z-headhesive;
+
+    @include dashboard-small-only {
+      display: none;
+    }
+  }
+
+  &.headhesive--stick {
+    @include transform(translateY(0));
+  }
+}

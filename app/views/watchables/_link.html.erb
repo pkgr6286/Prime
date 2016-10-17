@@ -1,0 +1,9 @@
+<% if current_user.subscriber? %>
+  <div class="license">
+    <%= link_to \
+      t("#{watchable.offering_type}.checkout_cta"),
+      [watchable, :licenses],
+      class: "license-button button free-with-subscription",
+      method: :post %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<% content_for :page_title, @repository.title %>
+<% content_for :meta_description, @repository.short_description %>
+<% content_for :subject_block do %>
+  <h1><%= @repository.name %></h1>
+  <h2 class="tagline"><%= @repository.tagline %></h2>
+<% end %>
+
+<div class="text-box-wrapper">
+  <div class="text-box">
+    <%= format_markdown @repository.description %>
+  </div>
+</div>
+
+<aside>
+  <section class="repository">
+    <%= link_to(
+      t("repository.view_repository"),
+      [@repository, :collaboration],
+      class: "button",
+      method: :post
+    ) %>
+  </section>
+</aside>
+
+<% content_for :outside do %>
+  <div id="flash"></div>
+<% end %>

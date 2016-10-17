@@ -1,0 +1,82 @@
+.centered-section {
+  background-color: $base-background-2;
+  border-bottom: 1px solid $base-border-color-1;
+  padding-bottom: 2em;
+  padding-top: 2em;
+
+  @include marketing-fullsize {
+    padding-bottom: 4em;
+    padding-top: 4em;
+    text-align: center;
+  }
+
+  .top-image {
+    border-radius: $base-border-radius;
+    display: block;
+    margin: 0 auto 2em;
+    max-width: 14em;
+  }
+
+  .bottom-image {
+    margin-top: 2em;
+  }
+
+  h3 {
+    margin: 0 auto 1.5em;
+    max-width: 80%;
+  }
+
+  p, 
+  a {
+    font-family: $serif;
+    font-size: 1.25rem;
+    margin: auto;
+    max-width: 80%;
+  }
+
+  blockquote {
+    border-left: none;
+    padding-left: 0;
+    position: relative;
+    quotes: $unicode-left-double-quote $unicode-right-double-quote $unicode-left-single-quote $unicode-right-single-quote;
+
+    @include marketing-fullsize {
+      margin: 0 auto;
+    }
+  }
+
+  cite {
+    display: block;
+    font-family: $sans-serif;
+    font-style: normal;
+    margin-top: 2em;
+  }
+}
+
+.centered-section-callout {
+  &:first-of-type::before {
+    content: open-quote;
+    font-size: 1.25em;
+    margin-right: 0.2em;
+  }
+
+  &:last-of-type::after {
+    content: close-quote;
+    font-size: 1.25em;
+    font-weight: 100;
+    margin-left: 0.2em;
+    position: absolute;
+  }
+}
+
+.centered-section-quoter {
+  color: $base-font-color;
+  display: block;
+  font-size: 1.125em;
+  margin-bottom: 0.25em;
+}
+
+.centered-section-position {
+  color: $base-font-color;
+  opacity: 0.8;
+}

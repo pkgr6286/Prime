@@ -1,0 +1,91 @@
+.flashcard-about {
+  font-size: $font-size-smallest;
+  padding-left: 3rem;
+  width: 100%;
+}
+
+.kept-flashcards {
+  .results-show & {
+    margin-top: 2rem;
+  }
+}
+
+.root-decks {
+  .kept-flashcards {
+    @include dashboard-medium {
+      align-items: baseline;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .to-flashcard {
+    @include dashboard-medium {
+      display: inline-block;
+      margin-right: 1em;
+      width: calc((100% - 2em) / 3);
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 1em;
+  }
+}
+
+
+.to-flashcard {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:hover::before {
+    border-color: $flashcard-hover-color;
+    color: $flashcard-hover-color;
+  }
+
+  &::before {
+    @extend %flashcard-colors;
+    @include size(2.25rem 1.35rem);
+    color: $flashcard-border-color;
+    content: "card";
+    display: inline-block;
+    font-size: $font-size-smallest;
+    font-weight: bold;
+    line-height: 1.75;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    text-align: center;
+  }
+
+  a {
+    flex: 1;
+  }
+}
+
+.kept-flashcard {
+  &::before {
+    border-color: $upcase-green;
+    color: $upcase-green;
+    content: "saved";
+  }
+
+  &:hover::before {
+    border-color: darken($upcase-green, 10%);
+    color: darken($upcase-green, 10%);
+  }
+}
+
+.saved-for-review {
+  color: $gray-3;
+  font-size: 0.9em;
+  padding-left: 10px;
+}
+
+.remove input {
+  @extend %button.small-button;
+  @extend %button.alert-button;
+}

@@ -1,0 +1,24 @@
+<% unless current_user.subscriber? %>
+  <%= render "subscribe_cta",
+    description: t("decks.subscribe_cta"),
+    button_text: t("decks.subscribe_link") %>
+<% end %>
+
+<section class="root-decks">
+  <h3><%= t('.title') %></h3>
+
+  <h4><%= t(".subhead") %></h4>
+
+  <p><%= t('.feature_description') %></p>
+
+  <section class="decks-area">
+    <%= render @decks %>
+  </section>
+
+  <section class="saved-deck">
+    <%= render(
+      "flashcards/needing_review",
+      flashcards_to_review: @flashcards_to_review
+    ) %>
+  </section>
+</section>

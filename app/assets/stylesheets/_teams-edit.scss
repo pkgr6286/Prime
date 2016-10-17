@@ -1,0 +1,76 @@
+body.teams-edit {
+  h4 {
+    span {
+      font-style: normal;
+      font-weight: normal;
+    }
+  }
+
+  .members, .invitations {
+    margin: 0;
+    padding: 0;
+
+    .username {
+      margin-left: 1.5em;
+    }
+
+    li {
+      border: 1px solid $warmgray;
+      border-radius: 3px;
+      display: block;
+      list-style-type: none;
+      margin: 0 0 .5rem;
+      padding: .5rem 1rem;
+      position: relative;
+
+      &.owner {
+        &:after {
+          content: '(Owner) ';
+        }
+      }
+
+      a {
+        padding: 0.5rem 1rem;
+        @include position(absolute, 0px 0px 0 0);
+      }
+    }
+  }
+
+  .invitations li {
+    background: #eee;
+    border-style: dashed;
+  }
+
+  .invite-members {
+    margin-top: 2rem;
+
+    > p {
+      font-weight: bold;
+    }
+
+    form {
+      margin: 0;
+    }
+
+    li.email, input[type=submit] {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    li.email {
+      @include span-columns(10);
+
+      label {
+        display: none;
+      }
+    }
+
+    input[type=submit] {
+      @include span-columns(2);
+    }
+
+    input[type=email] {
+      margin: 0 0 0.5rem 0;
+    }
+  }
+}

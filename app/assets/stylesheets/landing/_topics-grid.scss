@@ -1,0 +1,100 @@
+%quarter {
+  @include marketing-fullsize {
+    width: 25%;
+  }
+}
+
+%fifth {
+  @include marketing-fullsize {
+    width: 20%;
+  }
+}
+
+%sixth {
+  @include marketing-fullsize {
+    width: 16.666%;
+  }
+}
+
+.topics-grid {
+  background: $landing-purple;
+  border-bottom-color: $landing-purple-border;
+  margin-bottom: 0;
+  padding: 2em 0.5em;
+  position: relative;
+
+  @include marketing-fullsize {
+    padding-bottom: 4em;
+  }
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1116px;
+  }
+
+  .selling-point-title {
+    color: $white;
+    margin-bottom: 1em;
+  }
+
+  .topic-link {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    width: 50%;
+
+    @include marketing-small {
+      width: 33.333%;
+    }
+
+    @each $n in 7, 8 {
+      &:first-child:nth-last-child(#{$n}),
+      &:first-child:nth-last-child(#{$n}) ~ .topic-link {
+        @extend %quarter;
+      }
+    }
+
+    @each $n in 9, 10, 13, 14, 15 {
+      &:first-child:nth-last-child(#{$n}),
+      &:first-child:nth-last-child(#{$n}) ~ .topic-link {
+        @extend %fifth;
+      }
+    }
+
+    @each $n in 6, 11, 12, 16, 17, 18 {
+      &:first-child:nth-last-child(#{$n}),
+      &:first-child:nth-last-child(#{$n}) ~ .topic-link {
+        @extend %sixth;
+      }
+    }
+  }
+
+  .topic-tile {
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0 rgba(black, 0.3);
+    margin: 0;
+    text-align: center;
+
+    img {
+      margin: 20% auto 10%;
+      width: 60%;
+    }
+
+    li:not(.topic-title) {
+      display: none;
+    }
+
+    .topic-title {
+      color: $gray-3;
+      font-weight: 400;
+      font-size: 1.125em;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin: 0;
+      padding: 0 0 1.5em;
+    }
+  }
+}

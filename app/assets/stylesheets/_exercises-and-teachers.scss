@@ -1,0 +1,66 @@
+.exercises-and-teachers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .exercises-container {
+    flex-basis: 33em;
+    flex-shrink: 1;
+    margin: 1em;
+
+    .divider {
+      margin-bottom: 1rem;
+    }
+
+    .exercise {
+      border-bottom: 1px solid $base-border-color-1;
+      float: left;
+      margin: 0;
+      padding: 2em 0;
+      width: 100%;
+
+      .exercise-title {
+        @include dashboard-small-only {
+          margin-left: 50px;
+        }
+
+        margin-bottom: 0.5em;
+      }
+    }
+
+    .exercise-item {
+      display: inline-block;
+
+      @include dashboard-medium {
+        margin-left: 50px;
+      }
+    }
+  }
+
+  .text-box-wrapper {
+    flex-basis: 9em;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 1em;
+
+    .text-box h5 {
+      color: $gray-3;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .available-link {
+    border-radius: $base-border-radius;
+    border: 1px solid $upcase-green;
+    color: $upcase-green;
+    display: inline-block;
+    padding: 5px 10px;
+
+    .logo {
+      max-height: 1.4em;
+      text-align: center;
+      vertical-align: bottom;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="<%= trail.unstarted? ? "unstarted" : "started" %>">
+  <section class="trail <%= topic_classes(trail.topics) %>">
+    <header>
+      <%= render trail.topics %>
+      <h1><%= link_to trail, trail %></h1>
+      <p class="description"><%= trail.description %></p>
+      <%= render "practice/trail_description_tooltip", trail: trail %>
+    </header>
+
+    <div class="steps-and-start">
+      <%= render "trails/step_dots", trail: trail %>
+
+      <% if trail.steps.present? %>
+        <%= trail_call_to_action(trail) %>
+      <% end %>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,8 @@
+StringLiterals:
+  EnforcedStyle: double_quotes
+scss:
+  config_file: .scss-lint.yml
+  exclude:
+    - "vendor/assets/stylesheets/**"
+javascript:
+  config_file: .javascript-style.json

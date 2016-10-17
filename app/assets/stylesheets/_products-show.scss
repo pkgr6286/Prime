@@ -1,0 +1,71 @@
+body.products-show,
+body.videos-show {
+  .text-box-wrapper {
+    .text-box {
+      padding-top: 20px;
+      overflow: auto;
+
+      ul {
+        list-style-type: square;
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      li {
+        margin: 0 0 0 20px;
+
+        &:last-child {
+          margin-bottom: 0.8em;
+        }
+      }
+    }
+
+    .video-button-wrapper {
+      text-align: center;
+    }
+
+    .get-video {
+      width: 60%;
+    }
+
+    .video-button-wrapper + h3,
+    .video-button-wrapper + p {
+      margin-top: 30px;
+    }
+
+    #faq {
+      h3 {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .download_items, .resources ul {
+    padding-bottom: 0;
+    list-style-type: none;
+  }
+
+  aside {
+    > div {
+      margin-bottom: 1.25rem;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-device-width: 800px), screen and (max-width: 800px) {
+   .video-headline {
+     text-align: left;
+    }
+  }
+
+  @include body-mobile {
+    .text-box-wrapper .get-video {
+      width: 80% !important;
+    }
+  }
+}

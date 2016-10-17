@@ -1,0 +1,251 @@
+.teams {
+  .header-wrapper {
+    @include dashboard-medium {
+      margin: 0 auto;
+    }
+  }
+}
+
+.header-wrapper {
+  @include linear-gradient($upcase-blue-1, $upcase-blue-2);
+  @include dashboard-medium {
+    margin: 0 auto 40px;
+  }
+  width: 100%;
+  flex: none;
+
+  .ralph-header-logo {
+    height: 27px;
+    margin-left: 5px;
+  }
+
+  &.headhesive--stick {
+    .header-cta:hover {
+      background-color: inherit;
+    }
+
+    .header-cta-link {
+      @extend %button;
+      font-size: 1rem;
+      height: $header-height;
+      line-height: $header-height;
+      padding: 0 1rem;
+
+      &:hover,
+      &:focus {
+        @include linear-gradient(darken($cta-color-light, 2.5%), darken($cta-color-dark, 2.5%));
+        color: $cta-text-color;
+      }
+    }
+  }
+}
+
+.headhesive--stick .header-cta {
+  padding: $navigation-cta-offset;
+
+  &:hover {
+    background-color: inherit;
+  }
+}
+
+.header-cta-link {
+  .header-wrapper.headhesive--stick & {
+    @include linear-gradient($cta-color-light, $cta-color-dark);
+    border-radius: 3px;
+    box-shadow: $heavy-box-shadow;
+    color: $cta-text-color;
+    height: $header-height;
+    line-height: $header-height;
+    padding: 0 2em;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      @include linear-gradient(darken($cta-color-light, 2.5%), darken($cta-color-dark, 2.5%));
+      color: $cta-text-color;
+    }
+  }
+}
+
+.header-container {
+  @include user-select(none);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 0 $side-padding;
+  position: relative;
+
+  @include dashboard-small-only {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .branding {
+    float: left;
+    padding: 1rem 0;
+
+    @include dashboard-small-only {
+      display: block;
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .small-logo {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+  }
+
+  .header-tagline {
+    color: $white;
+    display: inline-block;
+    font-size: $font-size-smallest;
+    font-weight: 400;
+    position: relative;
+    top: 0.5em;
+    vertical-align: top;
+
+    @include marketing-tablet {
+      display: none;
+    }
+  }
+
+  .marketing-extra {
+    display: none;
+
+    @include dashboard-large {
+      display: inline;
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+
+    @include dashboard-small-only {
+      @include position(absolute, 1.25em 1em null null);
+      border: 1px solid rgba($base-background-1, 0.5);
+      border-radius: 3px;
+      color: $lightwarmgray;
+      cursor: pointer;
+      display: block;
+      font-size: $font-size-smallest;
+      font-weight: normal;
+      padding: 0.25em 0.5em;
+    }
+
+    &:active {
+      @include dashboard-small-only {
+        background-color: rgba($base-background-1, 0.125);
+        border-color: $base-background-1;
+      }
+    }
+  }
+
+  nav {
+    @include dashboard-small-only {
+      max-height: 100em;
+      overflow-y: hidden;
+      transition: all 0.75s $ease-in-out-sine;
+    }
+
+    @media print {
+      display: none;
+    }
+
+    &.closed {
+      @include dashboard-small-only {
+        max-height: 0;
+        opacity: 0;
+      }
+    }
+
+    img {
+      border-radius: 10%;
+      vertical-align: bottom;
+    }
+
+    ul {
+      list-style-type: none;
+      height: $navigation-height;
+      margin: 0;
+      padding: 0;
+
+      @include dashboard-small-only {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    li {
+      @include transition;
+      display: block;
+      float: left;
+      margin: 0;
+
+      @include dashboard-small-only {
+        border-bottom: 1px solid darken($upcase-blue, 5);
+        display: block;
+        margin: 0;
+        width: 100%;
+      }
+
+      &:hover,
+      &.active {
+        background: darken($upcase-blue, 5);
+      }
+
+      &:first-child a {
+        border: 0;
+      }
+    }
+
+    li a {
+      border-left: 1px solid darken($upcase-blue, 5);
+      color: white;
+      float: left;
+      font-family: $sans-serif;
+      font-size: 100%;
+      font-weight: 600;
+      height: $navigation-height;
+      padding: 1rem;
+
+      @include dashboard-small-only {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .account a {
+      background: image-url("account.svg") center center no-repeat;
+      background-size: em(26);
+      padding: em(15);
+      width: $navigation-height + 1px;
+
+      @include dashboard-small-only {
+        width: 100%;
+      }
+
+      img {
+        @include linear-gradient(#3481ea, #118ed5);
+      }
+    }
+
+    .subscription a {
+      font-weight: 700;
+    }
+  }
+}
+
+.header-thoughtbot-logo {
+  display: none;
+
+  .headhesive--stick & {
+    @include position(absolute, 0.48em 0 0 1em);
+    @include size(1.5em);
+    display: block;
+  }
+}

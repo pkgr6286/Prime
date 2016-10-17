@@ -1,0 +1,289 @@
+---
+en:
+  acceptances:
+    new:
+      sign_in_to_join_the_team: Please sign in to join the %{team_name} team
+      invitation_taken: That invitation is already taken
+  admin:
+    actions:
+      mentees:
+        breadcrumb: Mentees
+        menu: Mentees
+        title: Mentees
+    misc:
+      filter_date_format: '%D'
+  attempts:
+    flashcard_removed_from_review_queue: Flashcard removed from review queue
+    flashcard_saved: Saved flashcard for review
+  annual_billings:
+    new:
+      submit: "Switch to annual billing - $%{price} per member"
+      confirmation: "This will charge you $%{price} and switch you to annualized billing. That's what you wanted, right?"
+  authenticating:
+    github_signin: Sign in with GitHub
+    login_required: You must be signed in to view that page
+    auth_to_access_success: "Success! Enjoy your free videos."
+  beta:
+    offers:
+      actions:
+        accept: "Request Access"
+        decline: "No Thanks"
+    replies:
+      flashes:
+        accepted: Request received! We'll let you know when the trail is ready.
+        declined: Got it. We'll get that trail out of your way.
+  checkouts:
+    user_information_fields:
+      sign_up_with_username_and_password: "sign up with username and password?"
+    one_step_away_authenticated: "Hey %{name}, you're one step away. Enter payment below to start learning with Upcase now!"
+    one_step_away_anonymous: "Almost there - get instant access with expedited checkout!"
+  checkout:
+    sign_up_with_github: "Sign up with GitHub"
+    flashes:
+      already_subscribed: You are already subscribed.
+      invalid_coupon: The coupon code %{code} is no longer valid and has been
+        removed.
+      plan_not_found: We have a new subscription plan for you.
+      success: Thank you for subscribing to Upcase! We will email you your receipt
+        shortly.
+    problem_with_card: "There was a problem processing your credit card: %{message}"
+  completeables:
+    statuses:
+      complete: Complete
+      in-progress: In Progress
+      next-up: Next Up
+      unstarted: Unstarted
+  coupons:
+    flashes:
+      invalid: The coupon code you supplied is not valid.
+      success: Your coupon %{code} was processed successfully. The discount will be
+        applied at checkout.
+  deck-title-teaser: 'From: %{title}'
+  decks:
+    deck:
+      number_of_flashcards: '%{length} flashcards'
+    index:
+      feature_description: Flashcards are short quizzes with questions and answers
+        provided. They're mobile-friendly, and a perfect fit for commutes, waiting
+        rooms, and coffee breaks. They cover the bite-sized topics, code smells, patterns,
+        and anti-patterns that experts know and intermediates ought to learn.
+      subhead: Become a better programmer, even if you've only got five minutes.
+      title: Flashcards
+    subscribe_cta: We hope you're enjoying these flashcard decks. Ready to dive into all the other great content?
+    subscribe_link: Subscribe Now
+  exercist_trails:
+    show:
+      no_trail: No trail found for the exercise.
+  flashcards:
+    hidden_answer:
+      next-flashcard: next flashcard
+      next-flashcard_html: next flashcard &rarr;
+      reveal-answer: Reveal Answer
+      save-for-review: Save for review
+      save-for-review_html: Save for review &rarr;
+    needing_review:
+      blank-state-explanation: If you encounter a card that you want to return to
+        (like if its answer has interesting links that you'd like to read later),
+        just click "%{save_for_review_text}" and it will appear here.
+      review-queue: Saved Flashcards
+    show:
+      answer: 'Answer:'
+      next-flashcard: Next Flashcard
+      numbered-title: Flashcard %{position} of %{total}
+      return-to-results: Return to Flashcard Results
+  footer:
+    contact_us: Contact us
+  formtastic:
+    labels:
+      acceptance:
+        github_username: GitHub username
+  github_logo: GitHub
+  layouts:
+    app_name: Upcase
+    fallback_page_title: Upcase by thoughtbot | Learn Web Development Online
+    home_description: Join Upcase by thoughtbot. Explore video tutorials, exercises, forum discussions and the community you need to grow as a web developer.
+    thoughtbot: thoughtbot
+  licenses:
+    flashes:
+      error: You're already subscribed to Upcase!
+      success: Success! Enjoy your shiny new product.
+  line_item:
+    canceled_description: (Canceled) Subscription to Upcase
+    plan_description: Subscription to %{plan_name}
+  mailers:
+    subscription:
+      cancellation_survey:
+        subject: Suggestions for improving Upcase
+      subscription_receipt:
+        subject: '[Upcase] Your receipt and some tips'
+      upcoming_payment_notification:
+        subject: '[Upcase] thoughtbot is about to charge for your Upcase subscription'
+  pages:
+    welcome:
+      complete-welcome: Dismiss this page (for now)
+      headline: Read this to write better code.
+      post-welcome-message: All content unlocked. Enjoy!
+    landing:
+      sign_up_cta: Sign Up Now!
+  payments:
+    new:
+      pay-button-cta: Get instant access
+  plans:
+    forum: Private Discourse Forum
+    video_tutorials: Hands-On Video Tutorials
+  practice:
+    decks:
+      decks-list-title: decks
+  products:
+    locked:
+      available_for_free_after_authing: Sign In with GitHub for Free Access
+      get_access_by_joining: Get access by joining Upcase
+    subscribe_cta: You can access this %{offering_type} and others with a subscription
+      to %{subscription_name}
+  repository:
+    view_repository: View this Repository
+  results:
+    flashcard:
+      saved_for_review: Saved for review
+    show:
+      back-to-all-decks: return to all decks
+      complete: 'Great job! You completed:'
+      explanation: Click any flashcard to review it
+      title: '%{title}'
+  shared:
+    header:
+      content: Content
+      flashcards: Flashcards
+      forum: Forum
+      help-link: Help
+      tagline: Learn with thoughtbot
+      teams: Teams
+      search: Search
+      sign_in: Sign In
+      sign_out: Sign Out
+      trails: Trails
+      weekly_iteration: Weekly Iteration
+    subscription:
+      name: Upcase
+    subscriptions:
+      icon: ✶
+      multi_user: Team Membership
+      single_user: Subscribe Now
+    team_plan_name: Upcase for Teams
+    upcase: Upcase
+    content_meta_description: "Explore thoughtbot's video tutorials, exercises, and forum discussions on %{name}"
+  show:
+    weekly_iteration_cta: This video is a preview of all the great content in the Weekly Iteration. Scroll down to see some of the great videos. Want to watch them all?
+    preview_cta: This video is a preview. The full show is included with your Upcase
+      membership.
+  subscriptions:
+    accept_discounted_annual_subscription: Yes! I want to save $$$ and keep learning
+    cancel: Cancel
+    deactivation_scheduled_on: Scheduled for deactivation on %{date}
+    change_plan: Change plan
+    choose_plan: Switch Plan
+    confirm_cancel: Yes, cancel my subscription
+    current_plan_html: <p class="current-plan">This is your current plan</p>
+    discount:
+      forever: '%{final_price}'
+      once: '%{final_price} the first month, then %{full_price}'
+      repeating: '%{final_price} for %{duration_in_months} months, then %{full_price}'
+    flashes:
+      cancel:
+        success: We're sorry to see you go. You will have access to all the features
+          of your plan until the end of your current billing cycle.
+      change:
+        success: You have successfully changed your subscription plan, any remaining
+          balance has been applied to future invoices.
+      discount:
+        success: You've switched to a discounted subscription! Congrats.
+      subscription_required: You need a subscription to Upcase to access that feature.
+      update:
+        success: You have successfully updated your subscription credit card information.
+      upgrade_required: You must upgrade your plan to access that feature.
+      reactivate:
+        success: Awesome! We've reactivated your subscription!
+        failure: Unfortunately we were unable to reactivate you.
+      resubscribe:
+        success: Awesome! We've resubscribed you. Enjoy the Upcase!
+        failure: Unfortunately we were unable to resubscribe you. Please check your payment info and try again.
+    join_cta: Subscribe Now
+    new:
+      sign_up_cta: Sign Up Now!
+    checkout: Let's do this!
+    reason: Why have you decided to leave?
+    reason_explanation: This information will help us make Upcase better for future
+      members.
+    team_join_cta: Start Your Team
+  teams:
+    join_cta: Get your team started today
+    team:
+      team_owner_html: Your team owner, %{owner_email}, can make changes to your subscription.
+  teachers:
+    teacher:
+      header: Taught by
+  topics:
+    index:
+      view_products: View all thoughtbot products
+    product:
+      headings:
+        video: Video
+    promoted_product:
+      video:
+        action: Watch
+      video_tutorial:
+        action: Register
+    trail_map:
+      resources: Resources
+      validations: You should be able to
+    video_tutorial:
+      heading:
+        online: Online video tutorial
+  trails:
+    subscribe_cta: Some of these trails are locked because you don't yet have a
+      subscription.  Subscribe to Upcase to start leveling up.
+    subscribe_link: Subscribe Now
+    start_for_free: Start Course for Free by Signing In with GitHub
+    other_resources: Use these resources for reference and additional practice
+    thoughtbot_resources: Use these thoughtbot resources first
+    validations: '%{name} developers should be able to'
+    start_trail: Start trail
+    visit_trail: Visit trail
+    subscribe: Subscribe
+    promoted_message: "🎉 Check out our newest trail, hot off the presses!"
+  users:
+    flashes:
+      update:
+        success: Your profile has been updated.
+    edit:
+      have_any_questions: Have any questions?
+      here_to_help: We're here to help, so feel free to send any questions in and we'll get back to you right away.
+      contact_us: Contact us
+    resubscribe:
+      plea_html: We get it, things change. But if you want to come back, we have your card on file, and you just have to click this button. Oh, and if you want to change your card beforehand, <a href="%{billing_url}">you can do that right here</a>.
+      call_to_action: Resubscribe
+      call_to_action_price: "$%{price}/month"
+    reactivate:
+      plea: You can reactivate your account without any interruption in service, just like you never left!
+      call_to_action: Reactivate My Account
+  videos:
+    show:
+      mark-as-complete: Mark as Complete
+      auth_to_access_callout_text: This video is a preview. Want to see the full-length video right now for free?
+      auth_to_access_button_text: Sign In with GitHub for Free Access
+      access_callout_for_preview_text: This video is only a short sample, but you can access the full version and all our other great content by subscribing.
+      access_callout_for_preview_button: Subscribe Now
+      access_callout_for_sample_text: We hope you're enjoying this full-length sample video. Ready to dive into all the other great content?
+      access_callout_for_sample_button: Subscribe Now
+    seek_buttons:
+      jump-to-topic-in-video: Jump to Topic In Video
+  watchables:
+    preview:
+      subscribe_cta: This video is a preview.  Subscribe now to access the
+        full-length video, and all other videos.
+      subscribe_link: Subscribe Now
+  dynamic_page_titles:
+    show: "%{name} | Video Lessons by thoughtbot"
+    topic: "Learn %{name} | Online Courses by thoughtbot"
+    trail: "%{name} | Online Tutorial by thoughtbot"
+    video: "%{name} | Online Video Tutorial by thoughtbot"

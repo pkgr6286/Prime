@@ -1,0 +1,5 @@
+<% if current_user.subscriber? %>
+  <div class="forum">
+    <%= link_to "Discuss in the Forum", Forum.url, class: "button" %>
+  </div>
+<% end %>

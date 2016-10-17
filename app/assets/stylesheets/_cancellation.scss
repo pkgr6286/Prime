@@ -1,0 +1,18 @@
+.cancellation-discount {
+  article {
+    font-size: 1.5rem;
+    margin: 1em 0 0;
+  }
+
+  .cancellation-feedback {
+    margin: 2em 0;
+
+    textarea {
+      height: 6em;
+    }
+
+    input {
+      background-color: $red;
+    }
+  }
+}

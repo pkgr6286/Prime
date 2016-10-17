@@ -1,0 +1,44 @@
+.teams-new .benefits {
+  $icon-bullet-size: 2em;
+
+  padding: 2em;
+
+  ul {
+    @include outer-container;
+    max-width: 1440px;
+  }
+
+  li {
+    margin-top: 0;
+    margin-bottom: 2em;
+
+    @include marketing-fullsize {
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom: 0;
+      padding: 0 1em;
+    }
+  }
+
+  .benefit-icon {
+    background: $upcase-blue;
+    border-radius: 50%;
+    color: white;
+    float: left;
+    height: $icon-bullet-size;
+    line-height: $icon-bullet-size;
+    text-align: center;
+    width: $icon-bullet-size;
+  }
+
+  .benefit-content {
+    margin-left: $icon-bullet-size * 1.4;
+    padding-bottom: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0.125em 0 0.5em;
+  }
+}

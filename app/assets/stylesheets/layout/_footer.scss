@@ -1,0 +1,63 @@
+footer.links {
+  background: $footer-background;
+  position: relative;
+
+  .footer-content {
+    @include outer-container;
+  }
+
+  a {
+    color: $footer-link-color;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
+
+  .sign-out {
+    float: right;
+    padding: 1.5rem 2rem;
+  }
+
+  .thoughtbot {
+    float: left;
+    padding: 1.5rem 2rem 1.5rem 0;
+  }
+
+  .copyright {
+    background: $footer-background;
+    clear: left;
+    display: block;
+    font: italic $font-size-small $serif;
+    line-height: 1.5rem;
+    padding: 1rem 2rem;
+
+    div {
+      @include outer-container;
+      text-align: center;
+    }
+
+    a, p {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    img {
+      @include size(40px);
+      margin-right: 1rem;
+    }
+  }
+}
+
+@include body-mobile {
+  footer.links {
+    text-align: center;
+
+    .thoughtbot,
+    .sign-out {
+      display: none;
+    }
+  }
+}

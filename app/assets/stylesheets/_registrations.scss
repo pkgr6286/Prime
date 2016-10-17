@@ -1,0 +1,13 @@
+body.sessions,
+body.users,
+body.clearance-users {
+  form {
+    fieldset {
+      ol {
+        li {
+          margin-bottom: flex-gutter();
+        }
+      }
+    }
+  }
+}

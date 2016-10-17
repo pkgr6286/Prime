@@ -1,0 +1,40 @@
+.flashcard {
+  @extend %flashcard;
+
+  .revealed-answer & {
+    border-color: lighten($upcase-blue-1, 20%);
+  }
+}
+
+.revealed-answer .secondary-button {
+  margin-right: 1em;
+}
+
+.flashcard-prompt {
+  padding-top: 1em;
+}
+
+.flashcards-count {
+  @include position(absolute, null 1em 0.25em null);
+  font-size: $font-size-smallest;
+  margin-bottom: 0;
+
+  .flashcard & {
+    bottom: initial;
+    color: $gray-3;
+    top: 0.5em;
+  }
+}
+
+.reveal-answer,
+.next-flashcard[type="submit"] {
+  @extend %button;
+}
+
+.revealed-answer {
+  @include animation(reveal-answer 0.5s $ease-out-quad forwards);
+
+  form {
+    display: inline-block;
+  }
+}

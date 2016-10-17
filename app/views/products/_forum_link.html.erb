@@ -1,0 +1,3 @@
+<% if current_user && current_user.subscriber? %>
+  <%= link_to "View Forum", Forum.url("categories") %>
+<% end %>

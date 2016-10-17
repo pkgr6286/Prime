@@ -1,0 +1,334 @@
+/*
+ * Wistia requires a parent element that does NOT calculate its with based on
+ * the width of its children.
+ *
+ * http://wistia.com/doc/video-foam
+ */
+.wistia-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.weekly-iteration {
+  @each $video-state, $icon in $video-states {
+    &.#{$video-state} {
+      .video-text::before {
+        @include position(absolute, 3px null null -60px);
+        @include size(42px);
+        background-image: image-url("#{$icon}.svg");
+        background-size: cover;
+        content: "";
+      }
+    }
+  }
+
+  .video-tags {
+    @include clearfix;
+
+    a {
+      float: left;
+
+      &:not(:last-of-type) {
+        margin-right: $small-spacing;
+      }
+    }
+
+    .topic-label {
+      @include padding(3px null);
+      font-size: 10px;
+      margin-bottom: $small-spacing;
+      margin-top: 0;
+    }
+  }
+
+  .video-overview {
+    @include clearfix;
+    border-bottom: 1px solid tint($gray-4, 25%);
+    margin-bottom: $small-spacing;
+    padding-bottom: $small-spacing;
+    text-align: left;
+
+    &.hosts {
+      align-items: center;
+      border: 0;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+
+    &.title-tags {
+      padding-bottom: $base-spacing;
+    }
+
+    a {
+      display: block;
+
+      &:hover,
+      &:focus {
+        > .video-text,
+        > .video-length {
+          color: shade($hero-green, 25%);
+          transition: $fast-transition;
+        }
+      }
+    }
+
+    .video-text {
+      margin-bottom: 0;
+    }
+
+    .hosts-images {
+      img {
+        @include size(55px);
+        border-radius: 3px;
+      }
+    }
+
+    .video-length,
+    .hosted-by {
+      color: $darkwarmgray;
+      font-size: $font-size-smallest;
+    }
+
+    .video-length,
+    .video-tags {
+      margin-left: 60px;
+    }
+
+    .video-length {
+      margin-bottom: $small-spacing;
+    }
+
+    .teacher-names {
+      @include padding(0 $base-spacing null 0);
+      font-size: em(19);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .hosts-copy {
+      flex: 1;
+    }
+  }
+}
+
+.video-player {
+  margin-bottom: $large-spacing;
+
+  @include body-mobile {
+    margin-bottom: $base-spacing;
+  }
+
+  .download-links {
+    display: flex;
+
+    @include body-mobile {
+      flex-direction: column;
+    }
+  }
+
+  .download {
+    margin-right: 1em;
+
+    @include body-mobile {
+      margin-bottom: 1em;
+    }
+  }
+
+  .actions {
+    align-items: center;
+    display: flex;
+    margin-top: $base-spacing;
+
+    @include body-mobile {
+      align-items: flex-start;
+    }
+  }
+}
+
+.mark-as-complete form {
+  margin-bottom: 0;
+}
+
+.seek-button-template {
+  display: none;
+}
+
+.seek-marker {
+  @include dashboard-small-only {
+    display: none;
+  }
+
+  background: $white;
+  border: 1px solid $upcase-blue;
+  color: $upcase-blue;
+  font-size: 9px;
+  margin-left: 12px;
+
+  &:hover {
+    background-color: $upcase-blue;
+    color: $white;
+  }
+}
+
+.video-chat {
+  li:first-child {
+    margin-bottom: 8px;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+}
+
+.video-notes {
+  border: 1px solid $gray-4;
+  border-radius: $base-border-radius;
+}
+
+
+.video-notes-header {
+  background-color: $gray-5;
+  border-bottom: 1px solid $gray-4;
+  padding: $base-spacing;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.video-notes-content {
+  padding: $base-spacing;
+
+  @include dashboard-medium {
+    padding: $large-spacing;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  ul li {
+    list-style: initial;
+    margin-left: 1.2em;
+  }
+}
+
+.videos-show .content {
+  max-width: $max-width-narrow;
+}
+
+#videos .video {
+  border-bottom: 1px solid $base-border-color-1;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 1.5em 0;
+  width: 100%;
+
+  &:first-of-type {
+    padding-top: 1em;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:only-of-type {
+    border: 0;
+  }
+
+  .video-text::before {
+    float: left;
+    margin: 3px 10px 0 0;
+  }
+
+  .video-summary {
+    @include clearfix;
+  }
+
+  .video-text h2,
+  .video-text h3 {
+    margin: 0 0 0.4em;
+    padding: 0;
+  }
+
+  .video-date {
+    float: left;
+    font-weight: 600;
+    margin-right: 0.7em;
+    margin-top: -2px;
+  }
+
+  .video-info {
+    float: left;
+    margin-right: 1em;
+    margin-top: -2px;
+  }
+
+  .video-tags {
+    display: inline;
+    margin: 0.6em 0;
+    width: 100%;
+  }
+
+  .topic-label {
+    display: inline;
+    font-size: 0.5em;
+    margin: 0 1em 0 0;
+    padding: 3px 10px;
+  }
+}
+
+.access-callout {
+  @include margin($medium-spacing null);
+  @include dashboard-small-only {
+    flex-direction: column;
+  }
+
+  align-items: center;
+  background: lighten($cta-color-light, 40%);
+  border: 1px solid $base-border-color-yellow;
+  display: flex;
+  padding: $base-spacing;
+
+  p {
+    font-weight: $sans-serif-semibold;
+    margin-bottom: 0;
+    margin-right: $base-spacing;
+
+    @include dashboard-small-only {
+      margin-bottom: $base-spacing;
+      margin-right: 0;
+    }
+  }
+
+  .cta-button {
+    flex: none;
+
+    @include dashboard-small-only {
+      width: 100%;
+    }
+  }
+}
+
+.parent-collection a {
+  font-size: 1.2em;
+}
+
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  position: relative;
+
+  embed,
+  object,
+  iframe {
+    @include position(absolute, 0 null null 0);
+    @include size(100%);
+  }
+}

@@ -1,0 +1,31 @@
+<% render "shared/content_specific_head_tags", content: @topic, type: "topic" %>
+
+<% content_for :additional_body_classes, @topic.slug.parameterize %>
+
+<% content_for :subject_block do %>
+  <div class="topic-header">
+    <div class="topic-image">
+      <%= image_tag "topics/#{@topic.slug}.svg" %>
+    </div>
+
+    <div class="topic-content">
+      <h1>Learn <%= @topic.name %></h1>
+
+      <% if @topic.summary.present? %>
+        <div class="topic-description">
+          <h2 class="tagline">
+            <%= format_markdown @topic.summary %>
+          </h2>
+
+          <% if @topic.extended_description.present? %>
+            <div class="extended-description">
+              <%= format_markdown @topic.extended_description %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<%= render "resources", topic: @topic, video_listing: @video_listing %>

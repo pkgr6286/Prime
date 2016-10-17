@@ -1,0 +1,94 @@
+body.topics.topics-show {
+  .header-wrapper {
+    margin: 0;
+  }
+
+  .subject {
+    background: #ddd;
+    position: relative;
+    width: 100%;
+
+    .topic-header {
+      margin: 0 auto;
+      max-width: $max-width;
+      padding: 4.5rem $side-padding;
+      position: relative;
+
+      @include dashboard-small-only {
+        padding: 2rem $side-padding;
+        text-align: center;
+      }
+    }
+
+    .topic-content {
+      width: 80%;
+
+      @include dashboard-small-only {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-size: 1.125em;
+      font-weight: normal;
+      line-height: 1.6em;
+      margin-bottom: 2rem;
+
+      @include dashboard-small-only {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .topic-image {
+      @include size(180px);
+      position: absolute;
+      right: 0;
+      top: 1em;
+
+      @include dashboard-small-only {
+        top: 0;
+        position: relative;
+        display: inline-block;
+      }
+    }
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .resources-container {
+    @include outer-container;
+    max-width: $max-width;
+    flex: 1;
+    padding: 0 $side-padding 3em;
+    width: 100%;
+
+    &.fullscreen {
+      max-width: 100%;
+    }
+  }
+
+  .divider {
+    margin-top: 2em;
+  }
+
+  .trails-progress {
+    padding: 1px;
+    width: 100%;
+
+    header {
+      padding: 0;
+    }
+  }
+}
+
+.extended-description {
+  display: none;
+}
